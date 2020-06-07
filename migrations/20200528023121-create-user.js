@@ -8,7 +8,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      googleID: {
+      googleId: {
         type: Sequelize.STRING,
         allowNull: false
       },

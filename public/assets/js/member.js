@@ -68,10 +68,10 @@ $(document).ready(function () {
 
     $.getJSON("details.json", function (json) {
 
-      console.log("This is the YOUR USER ID: " + json.id)
+      console.log("This is the YOUR USER Id: " + json.id)
 
       const bookmark = {
-        userID: json.id,
+        userId: json.id,
         url: bookURL,
       }
 
@@ -100,16 +100,16 @@ $(document).ready(function () {
     event.preventDefault();
     regexp = /^[a-z ,.'-]+$/i
     
-    let tagID = $(this).data("number");
-    console.log(tagID);
-    let tagName = $("#" + tagID + "Tag").val().trim();
+    let tagId = $(this).data("number");
+    console.log(tagId);
+    let tagName = $("#" + tagId + "Tag").val().trim();
     console.log(tagName)
-    let bookID = $(this).data("book")
-    console.log(bookID)
+    let bookId = $(this).data("book")
+    console.log(bookId)
 
     let tag = {
       name: tagName,
-      bookID: bookID
+      bookId: bookId
     }
 
     if (regexp.test(tagName)) {
@@ -134,7 +134,7 @@ $(document).ready(function () {
     event.preventDefault();
     console.log("remove btn clicked")
     
-    //Get the tag ID and bookmark ID from button 
+    //Get the tag Id and bookmark Id from button 
     let tagNo = $(this).data("id") 
     let bookNo = $(this).data("bookmark")
     console.log(tagNo)
@@ -142,8 +142,8 @@ $(document).ready(function () {
 
     //move id's to send to ajax
     let tagRemove = {
-      tagID: tagNo,
-      bookmarkID: bookNo
+      tagId: tagNo,
+      bookmarkId: bookNo
     }
 
     $.ajax("/bookmark_tags", {
@@ -162,15 +162,15 @@ $(document).ready(function () {
    event.preventDefault()
    
    const url = $(this).data("url"); //url
-   const bookid = $(this).data("bookid"); //bookmarkID
-   const userid = $(this).data("userid"); //userID
+   const bookid = $(this).data("bookid"); //bookmarkId
+   const userid = $(this).data("userid"); //userId
    
    console.log(url)
    console.log(bookid)
    console.log(userid)
 
     let urlX = {
-      bookmarkID: bookid,
+      bookmarkId: bookid,
       url: url, 
       id: userid }
 
@@ -190,11 +190,11 @@ $(document).ready(function () {
     event.preventDefault();
     console.log("Delete btn clicked")
 
-    //ID still needs to be inserted into HTML
-    const tagID = $(this).data("id") 
-    console.log(tagID)
+    //Id still needs to be inserted into HTML
+    const tagId = $(this).data("id") 
+    console.log(tagId)
     const deleteTag = {
-      id: tagID,
+      id: tagId,
     }
     
     $.ajax("/tags_delete", {

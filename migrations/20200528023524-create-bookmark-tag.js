@@ -8,7 +8,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      bookmarkID: {
+      bookmarkId: {
         type: Sequelize.INTEGER,
         references: {
           model: {
@@ -18,7 +18,7 @@ module.exports = {
         },
         allowNull: false
       },
-      tagID: {
+      tagId: {
         type: Sequelize.INTEGER,
         references: {
           model: {
