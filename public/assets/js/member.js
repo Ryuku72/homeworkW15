@@ -269,7 +269,8 @@ $(document).ready(function () {
 
   function checkURL(tagVal) {
 
-    if ((tagVal.length >= 5 ) && (tagVal.substr(0, 3) !== 'http')) {
+
+    if ((tagVal.length >= 5 ) && (tagVal.substr(0, 4) !== 'http')) {
       let bookURL = 'http://' + tagVal;
       return bookURL
      
