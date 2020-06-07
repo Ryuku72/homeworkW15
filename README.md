@@ -9,9 +9,7 @@
 
 ****
 
-
-
-## AIM ##
+## Aim
 This week were placed into a group of 4 to combine our skills that we had learnt over the course and make a Web Application that did the following:
 * Must use a Node and Express server (passed)
 * Must be backed by a MySQL database and an ORM (not necessarily Sequelize) (passed)
@@ -24,7 +22,7 @@ This week were placed into a group of 4 to combine our skills that we had learnt
 * Must meet good quality coding standards (indentation, scoping, naming) (incomplete)
 * Must use Handlebars.js (passed)
 
-## Working Project Examples and Files ##
+## Working Project Examples and Files
 * Heroku App http://shrouded-shelf-71046.herokuapp.com/
 * Miro Blueprint https://miro.com/welcomeonboard/Du9qWdNDNhQ48zA9alHPATIVJUGEBNuIZmrpuQMBsBpfHgZnwwgP30MoNVOwfAjA
 * Presentation Slides https://drive.google.com/open?id=14s6flX8v16izcrERfrh76A_cyiU8QU-INxU9_Dg6biQ
@@ -32,7 +30,7 @@ This week were placed into a group of 4 to combine our skills that we had learnt
 * HomeworkW15 repo https://github.com/Ryuku72/homeworkW15
 
 
-## Key Concepts ##
+## Key Concepts
 * Node and Express Servers
 * Sequelize
 * Handlebars
@@ -80,10 +78,10 @@ Initially Kane's role was to co-ordinate the group and provide management. This 
 ### Mitchelle
 Core allocation was Passport, Oauth and the Login Page. Once these portions were finished, Mitchelle was going to jump into the backend and help others finish the project.
 
-## Roz
+### Roz
 Pure backend developer and was handling the database component of the assignment
 
-## Joshua
+### Joshua
 Front end developer who was in charge of Tailwind (CSS framework) and handlebars. Once front-end design was finished, I was supposed to jump into the backend and assist finishing the project
 
 <a name="Issues">
@@ -135,14 +133,14 @@ We still can't log out, we still can't choose Google users, there are no other f
 
 As leader, I should have pushed her to work on the issues with Passport but I feared that it would only lead to more fustration due to her communication habits and passport was submitted imcomplete. Usually the sign of a good group leader is to stay on top of things but in Mitchelle's case I did a poor job myself to communicate how much was incomplete in her contribution.
 
-## Roz
+### Roz
 Being a backend developer is not fun when you need the front end developed as soon as possible. Roz in the first couple of days did become unwell and there was a level of concern during this project that she was pushing herself too much. However, after overcoming her sickness she was amazing. Its a great sense of relief when you have someone in your group that is reliable and forward thinking. 
 
 Besides working on the database, Roz helped with the ApiRoutes, server, sequelize, member.js and the Member webpage mobile responsiveness. She later took on building the Heroku database and fixing any remaining routes that we had missed. 
 
 She didn't need much oversight and just always demanded a clear plan of action. A+
 
-## Joshua
+### Joshua
 When you have 1 member sick, 1 member MiA and another member who your unsure can help you... the first thing that disappears is your desire to go to sleep. I was supposed to be the front end developer but soon I was touching on every part of the project in one way or another. Until Roz became better I pushed forth with trying to communicate with the team on what I was working on and just co-ordinating where I could. My tiredness ment I stopped relying or believing my team was going to help and I had to carry the project myself. Roz did prove me wrong and honestly this project would not finished without her work but as a team member I admit I did push a level of stress on the team that was undeserved. 
 
 Overall I pushed the team to just aim for the bare minimum of a project and cut everything that I knew I didn't have time to finish by myself. With that in mind, it did help minimize expectation and eventually allow Roz and myself to clearly draw the line where the project should end. 
