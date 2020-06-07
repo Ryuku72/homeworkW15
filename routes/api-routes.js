@@ -9,7 +9,7 @@ module.exports = function(app) {
   app.post("/bookmarks", function(req, res) {
     db.bookmark.create({
       url: req.body.url,
-      userID: req.body.userID
+      userId: req.body.userId
     })
       .then(function(dbBookmark) {
         res.json(dbBookmark);
@@ -22,19 +22,19 @@ module.exports = function(app) {
 
     let tagName = req.body.name;
     console.log("req.body.name = " + tagName)
-    let bookID = req.body.bookID
-    console.log("req.body.bookid = " + bookID)
+    let bookId = req.body.bookId
+    console.log("req.body.bookid = " + bookId)
    
     //find or create? (next update?)
     db.tag.create({
       name: tagName,
     })
       .then(function(dbTag) {
-        console.log(dbTag.get("id"))
-        let tagID = dbTag.get("id")
+        console.log(dbTag)
+        let tagId = dbTag.get("id")
         db.bookmark_tag.create({
-        bookmarkID: bookID,
-        tagID: tagID
+        bookmarkId: bookId,
+        tagId: tagId
         }).then(()=>{
         res.json(dbTag);
         })
@@ -49,8 +49,8 @@ module.exports = function(app) {
 
     db.bookmark_tag.destroy({
       where: {
-        tagID: req.body.tagID,
-        bookmarkID: req.body.bookmarkID
+        tagId: req.body.tagId,
+        bookmarkId: req.body.bookmarkId
       }
     })
     .then(function(dbBookmark_Tag) {
@@ -62,7 +62,7 @@ module.exports = function(app) {
   app.delete("/tags_delete" ,function(req,res){
     db.bookmark_tag.destroy({
       where: { 
-        tagID: req.body.id
+        tagId: req.body.id
       }
       }).then(function(result) {
         db.tag.destroy({
@@ -79,18 +79,18 @@ module.exports = function(app) {
     //DELETE a BOOKMARK - WORKING
     app.delete("/bookmark_del", function(req,res) {
 
-      console.log("URL is " + req.body.url + " userID is " + req.body.id + " and bookmarkID is " + req.body.bookmarkID)
+      console.log("URL is " + req.body.url + " userId is " + req.body.id + " and bookmarkId is " + req.body.bookmarkId)
 
       db.bookmark_tag.destroy({
       where: { 
-        bookmarkID: req.body.bookmarkID
+        bookmarkId: req.body.bookmarkId
       }
       }).then(function(result) {
         db.bookmark.destroy({
           where: { 
-            userID: req.body.id,
+            userId: req.body.id,
             url: req.body.url,
-            id: req.body.bookmarkID
+            id: req.body.bookmarkId
           }
           }).then(function(result2) {
             console.log("This bookmark is delete")

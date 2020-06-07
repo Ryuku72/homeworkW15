@@ -6,14 +6,14 @@ module.exports = (sequelize, DataTypes) => {
       defaultValue: "www.google.com"
     },
     clickCount: DataTypes.INTEGER,
-    userID: DataTypes.INTEGER
+    userId: DataTypes.INTEGER
   }, {});
   bookmark.associate = function(models) {
     // associations can be defined here
 
     bookmark.belongsTo(models.user, {
       foreignKey: {
-        name: "userID",
+        name: "userId",
         allowNull: false,
       }, 
       

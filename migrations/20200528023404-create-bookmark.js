@@ -15,7 +15,7 @@ module.exports = {
       clickCount: {
         type: Sequelize.INTEGER
       },
-      userID: {
+      userId: {
         type: Sequelize.INTEGER,
         references: {
           model: {

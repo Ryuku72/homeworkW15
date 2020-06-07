@@ -26,7 +26,7 @@ module.exports = function(app){
                 const user = JSON.parse(jsonString)
                 //console.log("User is:", user.id) 
                 let query = user.id
-                //console.log("fs userID" + query);
+                //console.log("fs userId" + query);
                 db.user.findOne({
                     where: query,
                     include: [

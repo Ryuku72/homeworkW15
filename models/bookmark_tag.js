@@ -1,11 +1,11 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   let bookmark_tag = sequelize.define('bookmark_tag', {
-    bookmarkID:{
+    bookmarkId:{
       type: DataTypes.INTEGER,
       defaultValue: 0,
     }, 
-    tagID:{
+    tagId:{
       type: DataTypes.INTEGER,
       defaultValue: 0,
     } 

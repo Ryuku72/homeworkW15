@@ -50,15 +50,15 @@ $(document).ready(function () {
 
   //Add BookMark bar - WORKING
   $("#addBookmark").on('submit', function (event) {
+    console.log("you have clicked add bookmark)");
     event.preventDefault();
     regexp = /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/;
     let tagInput = $("#bookmarkInput").val().trim();
     let tagVal = tagInput.toLowerCase() 
+    console.log(tagInput);
+    console.log(tagVal);
 
-    if ((tagVal.length >= 5 ) && (tagVal.substr(0, 5) != 'http:') && (tagVal.substr(0, 5) != 'https') ) {
-       const bookURL = 'http://' + tagVal;
-     
-
+    bookURL = checkURL(tagVal)
     console.log("---------")
     console.log(bookURL)
     console.log("---------")
@@ -68,10 +68,10 @@ $(document).ready(function () {
 
     $.getJSON("details.json", function (json) {
 
-      console.log("This is the YOUR USER ID: " + json.id)
+      console.log("This is the YOUR USER Id: " + json.id)
 
       const bookmark = {
-        userID: json.id,
+        userId: json.id,
         url: bookURL,
       }
 
@@ -92,7 +92,7 @@ $(document).ready(function () {
         //Do an alert here
       }
     });
-  }
+  
   })
 
   //Add Tag
@@ -100,16 +100,16 @@ $(document).ready(function () {
     event.preventDefault();
     regexp = /^[a-z ,.'-]+$/i
     
-    let tagID = $(this).data("number");
-    console.log(tagID);
-    let tagName = $("#" + tagID + "Tag").val().trim();
+    let tagIndex = $(this).data("number");
+    console.log(tagIndex);
+    let tagName = $("#" + tagIndex + "Tag").val().trim();
     console.log(tagName)
-    let bookID = $(this).data("book")
-    console.log(bookID)
+    let bookId = $(this).data("book")
+    console.log(bookId)
 
     let tag = {
       name: tagName,
-      bookID: bookID
+      bookId: bookId
     }
 
     if (regexp.test(tagName)) {
@@ -129,12 +129,12 @@ $(document).ready(function () {
     }
   })
 
-  //Remove tag in DropDown box for Bookmar - WORKING
+  //Remove tag in DropDown box for Bookmark - WORKING
   $(".removeBtn").on('click', function (event) {
     event.preventDefault();
     console.log("remove btn clicked")
     
-    //Get the tag ID and bookmark ID from button 
+    //Get the tag Id and bookmark Id from button 
     let tagNo = $(this).data("id") 
     let bookNo = $(this).data("bookmark")
     console.log(tagNo)
@@ -142,8 +142,8 @@ $(document).ready(function () {
 
     //move id's to send to ajax
     let tagRemove = {
-      tagID: tagNo,
-      bookmarkID: bookNo
+      tagId: tagNo,
+      bookmarkId: bookNo
     }
 
     $.ajax("/bookmark_tags", {
@@ -162,15 +162,15 @@ $(document).ready(function () {
    event.preventDefault()
    
    const url = $(this).data("url"); //url
-   const bookid = $(this).data("bookid"); //bookmarkID
-   const userid = $(this).data("userid"); //userID
+   const bookid = $(this).data("bookid"); //bookmarkId
+   const userid = $(this).data("userid"); //userId
    
    console.log(url)
    console.log(bookid)
    console.log(userid)
 
     let urlX = {
-      bookmarkID: bookid,
+      bookmarkId: bookid,
       url: url, 
       id: userid }
 
@@ -190,11 +190,11 @@ $(document).ready(function () {
     event.preventDefault();
     console.log("Delete btn clicked")
 
-    //ID still needs to be inserted into HTML
-    const tagID = $(this).data("id") 
-    console.log(tagID)
+    //Id still needs to be inserted into HTML
+    const tagId = $(this).data("id") 
+    console.log(tagId)
     const deleteTag = {
-      id: tagID,
+      id: tagId,
     }
     
     $.ajax("/tags_delete", {
@@ -266,5 +266,19 @@ $(document).ready(function () {
   $("#logOut").on("click", function (event) { 
    console.log("Log Out Button Pushed");
   })
+
+  function checkURL(tagVal) {
+
+
+    if ((tagVal.length >= 5 ) && (tagVal.substr(0, 4) !== 'http')) {
+      let bookURL = 'http://' + tagVal;
+      return bookURL
+     
+    }else {
+      let bookURL = tagVal
+      return bookURL
+    }
+
+  }
 
 });
