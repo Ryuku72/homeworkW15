@@ -83,7 +83,7 @@
     {{!-- Main Page --}}
     <div class="flex-1 flex-row align-middle w-full grid grid-cols-2">
         <nav class="w-full flex block items-center justify-between px-2 py-1 col-span-1 bg-blue-400">
-            <form class="md:w-5/6 md:mt-2" name="addBookmark" id="addBookmark" data-user="{{this.id}}">
+            <form class="md:w-5/6 md:mt-2" name="addBookmark" id="addBookmark">
                 <label
                     class="w-3/12 justify-center md:justify-end text-xl font-bold font-mono tracking-tight md:mb-0 pr-5 pl-12 text-gray-700"
                     for="addTab">
@@ -93,7 +93,7 @@
                     class="w-7/12 box-border h-10 shadow appearance-none border rounded-lg py-1 px-6 text-gray-700 text-left leading-tight focus:outline-none focus:shadow-outline"
                     id="bookmarkInput" type="text" placeholder="http://www.BookMark-R.com">
                 <button
-                    class="inline-flex h-10 w-24 mx-2 my-3 inline-block border text-white font-bold py-2 px-3 align-middle justify-between rounded-lg bg-blue-900 outline-none  border-transparent hover:bg-green-600 focus:outline-none">
+                    class="inline-flex h-10 w-24 mx-2 my-3 inline-block border text-white font-bold py-2 px-3 align-middle justify-between rounded-lg bg-blue-900 outline-none  border-transparent hover:bg-green-600 focus:outline-none" data-user="{{this.is}}">
                     <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
                         height="24">
                         <path class="heroicon-ui"
