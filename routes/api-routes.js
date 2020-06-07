@@ -31,13 +31,13 @@ module.exports = function(app) {
     })
       .then(function(dbTag) {
         console.log(dbTag)
-        // let tagId = dbTag.get("id")
-        // db.bookmark_tag.create({
-        // bookmarkId: bookId,
-        // tagId: tagId
-        // }).then(()=>{
-        // res.json(dbTag);
-        // })
+        let tagId = dbTag.get("id")
+        db.bookmark_tag.create({
+        bookmarkId: bookId,
+        tagId: tagId
+        }).then(()=>{
+        res.json(dbTag);
+        })
       })
   });
 
