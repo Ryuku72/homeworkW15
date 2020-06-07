@@ -58,12 +58,7 @@ $(document).ready(function () {
     console.log(tagInput);
     console.log(tagVal);
 
-    if ((tagVal.length >= 5 ) && (tagVal.substr(0, 5) !== 'http')) {
-      let bookURL = 'http://' + tagVal;
-     
-    }else {
-      let bookURL = tagVal
-    }
+    bookURL = checkURL(tagVal)
     console.log("---------")
     console.log(bookURL)
     console.log("---------")
@@ -271,5 +266,18 @@ $(document).ready(function () {
   $("#logOut").on("click", function (event) { 
    console.log("Log Out Button Pushed");
   })
+
+  function checkURL(tagVal) {
+
+    if ((tagVal.length >= 5 ) && (tagVal.substr(0, 3) !== 'http')) {
+      let bookURL = 'http://' + tagVal;
+      return bookURL
+     
+    }else {
+      let bookURL = tagVal
+      return bookURL
+    }
+
+  }
 
 });
