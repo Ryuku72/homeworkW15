@@ -129,7 +129,7 @@ $(document).ready(function () {
     }
   })
 
-  //Remove tag in DropDown box for Bookmar - WORKING
+  //Remove tag in DropDown box for Bookmark - WORKING
   $(".removeBtn").on('click', function (event) {
     event.preventDefault();
     console.log("remove btn clicked")
