@@ -1,3 +1,8 @@
+# GROUP PROJECT 2
+## Bookmakr
+8th June 2020
+****
+
 ### Homework W 15 Stats
 ![GitHub W15 last commit](https://img.shields.io/github/last-commit/Ryuku72/HomeworkW15?style=for-the-badge)
 ![GitHub W15 commit activity](https://img.shields.io/github/commit-activity/y/Ryuku72/HomeworkW15?style=for-the-badge)
@@ -8,9 +13,6 @@
 ![GitHub Project2 commit activity](https://img.shields.io/github/commit-activity/y/Kane-R/Project2?style=for-the-badge)
 ![GitHub contributors](https://img.shields.io/github/contributors/Kane-R/Project2?style=for-the-badge)
 
-# Project2 BookMark Application #
-## Bookmakr
-8th June 2020
 ****
 
 ## AIM ##
