@@ -1,19 +1,19 @@
-const path = require("path")
-const express = require("express");
 const db = require("../models");
-const chalk = require('chalk')
 const fs = require('fs');
 
 module.exports = function(app){
-    //Login page
-    // create home route
-    app.get('/', function (req, res) {
-        // if (req.user) {
-        //     res.redirect("/members");
-        // }
-        //set to members while developing - remember to change this
-        res.render('login');
+
+    //login page
+    app.get('/', (req, res) => {
+        res.render('login', { user: req.user });
     });
+
+    app.get("/logout", function (req,res){
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+    })
 
     // Members page (dashboard)
     app.get('/members', function (req, res) {
@@ -49,4 +49,7 @@ module.exports = function(app){
         })
 
 })
+
+
+
 }

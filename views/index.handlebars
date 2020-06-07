@@ -82,8 +82,9 @@
     </nav>
     {{!-- Main Page --}}
     <div class="flex-1 flex-row align-middle w-full grid grid-cols-2">
-        <nav class="w-full flex block items-center justify-between px-2 py-1 col-span-1 bg-blue-400">
+        <nav class="w-full flex block justify-between px-2 py-1 col-span-1 bg-blue-400">
             <form class="md:w-5/6 md:mt-2" name="addBookmark" id="addBookmark">
+             
                 <label
                     class="w-3/12 justify-center md:justify-end text-xl font-bold font-mono tracking-tight md:mb-0 pr-5 pl-12 text-gray-700"
                     for="addTab">
@@ -92,8 +93,10 @@
                 <input
                     class="w-7/12 box-border h-10 shadow appearance-none border rounded-lg py-1 px-6 text-gray-700 text-left leading-tight focus:outline-none focus:shadow-outline"
                     id="bookmarkInput" type="text" placeholder="http://www.BookMark-R.com">
+                
                 <button
-                    class="inline-flex h-10 w-24 mx-2 my-3 inline-block border text-white font-bold py-2 px-3 align-middle justify-between rounded-lg bg-blue-900 outline-none  border-transparent hover:bg-green-600 focus:outline-none" data-user="{{this.is}}">
+                    class="inline-flex h-10 w-24 mx-2 my-3 inline-block border text-white font-bold py-2 px-3 align-middle justify-between rounded-lg bg-blue-900 outline-none  border-transparent hover:bg-green-600 focus:outline-none"
+                    data-user="{{this.is}}">
                     <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
                         height="24">
                         <path class="heroicon-ui"
@@ -101,19 +104,21 @@
                     </svg>
                     <spam>Add</spam>
                 </button>
+               <div class="requirements w-full inline-block text-center text-red-800 text-md italic hidden" id="warning">
+                    Your URL must either start with www. or http or https
+                </div>
             </form>
             <ul class="relative block p-2 list-none items-center hidden md:flex">
                 <a class="block" id="potrait" href="">
                     <div class="items-center flex">
-                        <span
-                            class="absolute top-0 right-0 w-12 h-12 mb-5 text-sm text-white inline-flex items-center mr-6">
-                            <img class="mr-6 mb-5 rounded-full" src="{{avatar}}" alt="portfolio icon"
-                                class="w-full rounded-full align-middle border-none shadow-lg" /></span>
+                        <span class="absolute top-0 right-0 w-12 h-12 mt-6 text-sm text-white inline-flex items-center mr-6">
+                            <img class="mr-6 mb-5 rounded-full w-full border-none shadow-lg" src="{{avatar}}" alt="portfolio icon"
+                                /></span>
                     </div>
                 </a>
                 <div class="hidden absolute z-50 right-0 top-0 mt-12 mr-10 bg-yellow-500 font-mono font-bold text-base float-left py-4 list-none text-left rounded shadow-lg hover:bg-black"
                     style="min-width: 12rem;" id="user-dropdown">
-                    <a href="/auth/logout"
+                    <a href="/logOut"
                         class="text-lg font-normal inline-block inline-flex align-middle w-full whitespace-no-wrap bg-transparent text-gray-800 hover:text-blue-500"
                         id="logOut">
                         <svg class="mx-4 fill-current hover:text-blue-500" xmlns="http://www.w3.org/2000/svg"
@@ -171,16 +176,18 @@
                                     d="M16.24 14.83a1 1 0 0 1-1.41 1.41L12 13.41l-2.83 2.83a1 1 0 0 1-1.41-1.41L10.59 12 7.76 9.17a1 1 0 0 1 1.41-1.41L12 10.59l2.83-2.83a1 1 0 0 1 1.41 1.41L13.41 12l2.83 2.83z" />
                             </svg>
                         </button>
-                        <form class="tracking-tight justify-evenly createTagForm" data-number="{{@index}}" data-book="{{this.id}}">
+                        <form class="tracking-tight justify-evenly createTagForm" data-number="{{@index}}"
+                            data-book="{{this.id}}">
 
                             <p class="w-full inline-block text-center text-sm font-mono tracking-tight text-gray-700"
                                 for="form{{this.id}}">Create & Remove tags</p>
                             <input
                                 class="w-10/12 flex mx-auto box-border shadow appearance-none py-1 px-1 m-1 border rounded text-xs text-gray-700 leading-tight focus:outline-none focus:shadow-outline createTag"
-                                id="{{@index}}Tag" type="text" placeholder="News" maxlength="10">
-                            <p style="font-size: xx-small" class="font-sans text-gray-700 text-center">Max length of 10 characters</p>
+                                id="{{@index}}Tag" type="text" placeholder="News" maxlength="8">
+                            <p style="font-size: xx-small" class="font-sans text-gray-700 text-center">Max length of 8
+                                characters</p>
                         </form>
-                 
+
                         <form name="dropDown{{@index}}">
                             <label class="w-full text-xs font-mono tracking-tight text-center text-gray-700 mb-5"
                                 for="addTag{{@index}}">Assigned Tags</label>
@@ -188,7 +195,8 @@
                             <ul class="list-none">
                                 <li class="w-10/12 inline-block align-middle mb-3 mx-auto rounded-lg"
                                     id="{{this.name}}tagBtn">
-                                    <p class="items-center inline-block inline-flex align-middle justify-between text-white bg-green-500 w-full text-xs text-white font-bold py-2 px-2 rounded">
+                                    <p
+                                        class="items-center inline-block inline-flex align-middle justify-between text-white bg-green-500 w-full text-xs text-white font-bold py-2 px-2 rounded">
                                         <svg class="w-4 h-4 stroke-current stroke-2 text-gray-700"
                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                             <path class="heroicon-ui"

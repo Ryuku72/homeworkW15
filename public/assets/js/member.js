@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
 
   //Log Out button pop up window
@@ -76,7 +77,7 @@ $(document).ready(function () {
       }
 
       if (regexp.test(tagVal)) {
-        console.log("true");
+        $("#warning").addClass("hidden")
         // Do Ajax call here
 
         $.ajax("/bookmarks", {
@@ -88,8 +89,7 @@ $(document).ready(function () {
           }
         )
       } else {
-        console.log("false");
-        //Do an alert here
+        $("#warning").removeClass("hidden")
       }
     });
   
@@ -98,7 +98,7 @@ $(document).ready(function () {
   //Add Tag
   $(document).on('submit', '.createTagForm', function (event) {
     event.preventDefault();
-    regexp = /^[a-z ,.'-]+$/i
+
     
     let tagIndex = $(this).data("number");
     console.log(tagIndex);
@@ -111,10 +111,6 @@ $(document).ready(function () {
       name: tagName,
       bookId: bookId
     }
-
-    if (regexp.test(tagName)) {
-      console.log("Added Tag");
-
       $.ajax("/tags", {
         type: 'POST',
         data: tag,
@@ -123,10 +119,6 @@ $(document).ready(function () {
             console.log("posted!!!")
             location.reload(true);
           })
-    } else {
-      console.log("Tag Input Error");
-      //Do an alert here
-    }
   })
 
   //Remove tag in DropDown box for Bookmark - WORKING
@@ -263,7 +255,7 @@ $(document).ready(function () {
   })
 
   //Log Out Button
-  $("#logOut").on("click", function (event) { 
+  $("#logOut").on("click", function () { 
    console.log("Log Out Button Pushed");
   })
 

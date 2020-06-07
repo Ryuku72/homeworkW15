@@ -2,7 +2,6 @@ const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const keys = require('./keys');
 const db = require("../models");
-const chalk = require("chalk")
 const fs = require("fs")
 
 passport.use(
@@ -12,12 +11,6 @@ passport.use(
         clientSecret: keys.google.clientSecret,
         callbackURL: '/auth/google/redirect'
     }, (accessToken, refreshToken, profile, done) => {
-        //passport callback function
-        //console.log('passport callback function fired:');
-       // console.log(chalk.red(JSON.stringify(profile, null, 2)));
-       // console.log(chalk.yellow(profile.displayName));
-       // console.log(chalk.green(profile.photos[0].value));
-        //console.log(accessToken);
 
         db.user.findOrCreate({
             where: {
@@ -28,9 +21,8 @@ passport.use(
                 avatar: profile.photos[0].value
 
             },
-        }).then(([user], err) => {
+        }).then(([user]) => {
            //console.log(chalk.blue(JSON.stringify(user)))
-            
             const patron = {
                 id: user.id,
                 name: user.displayName,
@@ -45,10 +37,9 @@ passport.use(
                     console.log('Success, JSON File has been written')
                 }
             })
-            return done(err, user);
-        });
+        })
+        return done(null, profile);
     }
-
 ));
 
 // In order to help keep authentication state across HTTP requests,
@@ -58,8 +49,8 @@ passport.serializeUser(function(user, cb) {
     cb(null, user);
 });
 
-passport.deserializeUser(function(obj, cb) {
-    cb(null, obj);
+passport.deserializeUser(function(user, cb) {
+    cb(null, user);
 });
 
 
