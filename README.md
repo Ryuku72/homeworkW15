@@ -3,9 +3,9 @@
 8th June 2020
 
 ****
-![GitHub W15 last commit](https://img.shields.io/github/last-commit/Ryuku72/HomeworkW15?style=for-the-badge)![GitHub W15 commit activity](https://img.shields.io/github/commit-activity/y/Ryuku72/HomeworkW15?style=for-the-badge)![GitHub contributors](https://img.shields.io/github/contributors/Ryuku72/HomeworkW15?style=for-the-badge)Homework W 15 Stats
+![GitHub W15 last commit](https://img.shields.io/github/last-commit/Ryuku72/HomeworkW15?style=for-the-badge)![GitHub W15 commit activity](https://img.shields.io/github/commit-activity/y/Ryuku72/HomeworkW15?style=for-the-badge)![GitHub contributors](https://img.shields.io/github/contributors/Ryuku72/HomeworkW15?style=for-the-badge) _Homework W 15 Stats_
 ****
-![GitHub Project2 last commit](https://img.shields.io/github/last-commit/Kane-R/Project2?style=for-the-badge)![GitHub Project2 commit activity](https://img.shields.io/github/commit-activity/y/Kane-R/Project2?style=for-the-badge)![GitHub contributors](https://img.shields.io/github/contributors/Kane-R/Project2?style=for-the-badge)Project 2 Stats
+![GitHub Project2 last commit](https://img.shields.io/github/last-commit/Kane-R/Project2?style=for-the-badge)![GitHub Project2 commit activity](https://img.shields.io/github/commit-activity/y/Kane-R/Project2?style=for-the-badge)![GitHub contributors](https://img.shields.io/github/contributors/Kane-R/Project2?style=for-the-badge) _Project 2 Stats_
 ****
 
 ## AIM ##
