@@ -100,7 +100,9 @@ $(document).ready(function () {
     event.preventDefault();
     regexp = /^[a-z ,.'-]+$/i
     
-    let tagName = $("#" + tagId + "Tag").val().trim();
+    // let tagId = $(this).data("number");
+    // console.log(tagId);
+    let tagName = $("#TagInput").val().trim();
     console.log(tagName)
     let bookId = $(this).data("book")
     console.log(bookId)

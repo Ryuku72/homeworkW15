@@ -30,14 +30,14 @@ module.exports = function(app) {
       name: tagName,
     })
       .then(function(dbTag) {
-        console.log(dbTag.get("id"))
-        let tagId = dbTag.get("id")
-        db.bookmark_tag.create({
-        bookmarkId: bookId,
-        tagId: tagId
-        }).then(()=>{
-        res.json(dbTag);
-        })
+        console.log(dbTag)
+        // let tagId = dbTag.get("id")
+        // db.bookmark_tag.create({
+        // bookmarkId: bookId,
+        // tagId: tagId
+        // }).then(()=>{
+        // res.json(dbTag);
+        // })
       })
   });
 
