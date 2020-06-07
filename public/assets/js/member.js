@@ -58,7 +58,7 @@ $(document).ready(function () {
     console.log(tagInput);
     console.log(tagVal);
 
-    if ((tagVal.length >= 5 ) && ((tagVal.substr(0, 5) != 'http') || (tagVal.substr(0, 5) != 'https')) ) {
+    if ((tagVal.length >= 5 ) && ((tagVal.substr(0, 5) != 'http:/') || (tagVal.substr(0, 5) != 'https:')) ) {
        const bookURL = 'http://' + tagVal;
      
 
