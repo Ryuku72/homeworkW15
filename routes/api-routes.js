@@ -26,7 +26,7 @@ module.exports = function(app) {
     console.log("req.body.bookid = " + bookId)
    
     //find or create? (next update?)
-    db.tag.create({
+    db.tag.findOrCreate({
       name: tagName,
     })
       .then(function(dbTag) {
