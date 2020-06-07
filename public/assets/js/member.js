@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
 
   //Log Out button pop up window
