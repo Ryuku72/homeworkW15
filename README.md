@@ -56,17 +56,15 @@ This week were placed into a group of 4 to combine our skills that we had learnt
 <a name="Disclaimer">
 
 ## Disclaimer
-Due the volumn of work committed to this project and the issues that arouse over time, the project was eventually split into 2 separate repositories with the intention of finishing the project without the possibility of tampering or increased fustration. This was a regretable but neccessary choice to ensure the project was handed in.
+Due the volumn of work committed to this project and the issues that arouse over time, the project was eventually split into 2 separate repositories with the intention of finishing the project without the possibility of being affected by a previous merge and fix an authentication issue. 
 
 This readme will detail my overall experience with this project and indicate how I as a group leader could have done better and how my decisions reflected on the overall team experience.
-
-Note: Another reason this project was made separate was to remain honest and feel free to explain all issues without possible tampering
 <br>
 
 <a name="Build">
 
 ## Build Process
-This week we were placed into a group of 4 which consisted of Joshua (me), Kane, Roz and Mitchelle. After short discussions we as a group came to conclusion to build a web api around bookmarks. The core features would be tags and a search function. Being simple in concept, the group was then allocated into its core roles however, as time pasted those roles blurred and soon the project became a mess. 
+This week we were placed into a group of 4 which consisted of Joshua (me), Kane, Roz and Mitchelle. After short discussions we as a group came to conclusion to build a web api around bookmarks. The core features would be tags and a search function. Being simple in concept, the group was then allocated into its core roles however, as time pasted those roles blurred. 
 
 <a name="Group">
 
@@ -76,7 +74,7 @@ This week we were placed into a group of 4 which consisted of Joshua (me), Kane,
 Initially Kane's role was to co-ordinate the group and provide management. This was achieved by using Miro and discusing with the group on how they can contribute. Besides this he was interested in doing some of the backend work and assisting on the front end where possible. 
 
 ### Mitchelle
-Core allocation was Passport, Oauth and the Login Page. Once these portions were finished, Mitchelle was going to jump into the backend and help others finish the project.
+Core allocation was Passport, Oauth and the Login Page. Once these portions were finished, Mitchelle was going to jump into the front end and help others finish the project.
 
 ### Roz
 Pure backend developer and was handling the database component of the assignment
@@ -91,59 +89,53 @@ Working in a group environment is an important skill for anyone. It teaches you 
 * Communication almost became one sided 
 * Teamwork fell apart halfway
 * Project was eventually split in 2
-* Things became very emotional, stressful and fustrating.
-
-Though we were not the only group affected by poor team contribution, it doesn't stop the fact that it still happened. Whether that's my fault as the group leader or my group members for not pulling there weight. Besides the usual team problems there were huge issues with other things. 
+* Contribution and time was very different according to group member
 
 ### Sequelize
-The documents for Sequelize is not great and there is not enough information around the web to have a clear idea on how to use Sequelize properly without more experience with the package or asking help from teachers. The documents are not great, the examples are unhelpful and when you read something like "the doco's are wrong and this is a better solution" then you kind of lose hope
+The documentation for Sequelize was not great and there is not enough information floating around the web. In addition, when you read something like "the doco's are wrong and this is a better solution" then you kind of lose hope.
 
-### GIT
-We used GitKraken for this project and whilst visually its great the more impactful issues like merging and rebasing were massive issues within themselves. This is very clear when someone group members start spaming and pushing to master with a version that doesn't work. Overall the GitKraken experience was fustrating due to inexperience. 
+### GitKraken
+We used GitKraken for this project and whilst visually pleasing the inexperience within our team lead to issues with merging and rebasing. One the key reason for the split was gitKraken
 
 ### Heroku
-We set Kane to deal with Heroku and we never knew that our database should not have any Uppercase letters. Whilst Kane didn't communcate this well Roz was able to in a single day get our project up and running on Heroku. 
+Kane was set to deal with Heroku and we never knew that our database should not have any Uppercase letters. Whilst Kane didn't communcate this well Roz eventually jumped in and sorted this problem.
 
 ### GOOGLE Oauth
-With time running out Roz and myself had to read the docs about Passport and Google Authentication. We initially had issues with loggin after our projects were merged and updated but this was solved in the last 2 days by separating the project from Kane's repository. Part of the issue was Mitchelle's authentiucation key was attached to the project and we had little control on trying to get things to work without chasing her down.
+The initial passport portion on the project was supplied by Mitchelle. Unfortunately, once the project merged and routes had to be altered issues started arrising quickly. LogOut does not work and though I have reviewed the passport documentation I just didn't have time to fix this issue. 
+
+Furthermore, once Heroku was brought into the mix we had issues with Authetication and this added to the reason of just making our own google accounts to sort out the problems. 
 
 ### Handlebars
 Honestly, once we learnt some tricks Handlebars was no stress
 
 ### Tailwind
-Not easy to pickup and Flexbox is overwhelming but the docs were decent. Tailwind was decent and I would use it again. Other group members did find Tailwind to be a bit much whilst other actually liked it. 
+Not easy to pickup and Flexbox is overwhelming but the docs were decent and I would use it again. Other group members did find Tailwind to be a bit much whilst other actually liked it. 
 <br>
 <a name="Problems">
 
 ## Group Problem Solving
 
 ### Kane
-At first Kane was fixed on ensuring the group knew what they were doing. There was so many conversations about what the project should look like and interact with patrons that people started coding without his knowledge. Once everyone else started coding, it became quickly obvious that his ability to contribute was limited.
+At first Kane was fixed on ensuring the group knew what they were doing with long group meetings and ongoing talks about features. Eventually, people pushed ahead with actually building the code and avoiding the meetings. Whilst Kane's desire to manage shined through his inability to code quickly became apparent. 
 
-Soon after I started filling in the group leader role and set him a test. After failing the test I allocated him to work on the front login page and asset collection. Towards the end I sent him to figure out how to upload to Heroku and this caused more headached.
+Kane is very good at talking and will always be online late into the night to bounce ideas. He attended ever meeting and kept everyone up to date about what was happening. However, he was poor at communicating issues the he was experiencing and being so close to master there was a point towards the end where we didn't understand what was happening with master anymore. 
 
-Kane is very good at talking and will always be online late into the night to bounce ideas. He attended ever meeting and kept everyone up to date about what was happening. However, he was poor at communicating issues with Heroku, he used templates for his designs and didn't understand leaving lots of notes on pages and unused files around the project would eventually create headaches. This was unfortunate but we did separate the files for this reason as we didn't want more files and further confusion as we neared the projects finally. 
+Project was split after the presentation and an unaffect copy of the project that did not contain Kane'e latest merge was used in Homeworkw15 upload to Heroku. 
 
 ### Mitchelle
-The initial task for Mitchelle was Passport, Authetication and the login page. Quickly Mitchelle went MIA and the group honestly became scared that she was not going to contribute. However, she came through and did provide us with the files for passport and with the help of the teacher we were able to connect the login and members page. From this point she was supposed to co-ordinate with Kane on the front page and help with the backend.
+The initial task for Mitchelle was Passport, Authetication and the login page. Quickly Mitchelle went MIA and the group honestly became scared that she was not going to contribute. However, she came through and did provide us with the files for passport half way through the deadline. Unfortunately, due to a lack of communication on both sides she quietly disappeared again.
 
-This was my mistake. I soon realised that Passport was incomplete. We were unable to login, unable to gain the data that we needed from the login and we couldn't log out. However, as Mitchelle was often absent from group chat and interact we as a group decided to just make due with what she had submitted. From that point onwards, Roz and myself tried to get Passport to work outside of all the other issues we were already dealing with. In the long run, Passport is a failure
+After merging her files with the project and moving around the routes LogIn and LogOut became buggy but internally I just tried to fix it myself due to this communication problem. In the end I ran out of time and was unable to fix passport. 
 
-We still can't log out, we still can't choose Google users, there are no other forms to log in. The method to gain peoples details was a hack and from this point Mitchelle's collaboration was no existent. 
-
-As leader, I should have pushed her to work on the issues with Passport but I feared that it would only lead to more fustration due to her communication habits and passport was submitted imcomplete. Usually the sign of a good group leader is to stay on top of things but in Mitchelle's case I did a poor job myself to communicate how much was incomplete in her contribution.
 
 ### Roz
-Being a backend developer is not fun when you need the front end developed as soon as possible. Roz in the first couple of days did become unwell and there was a level of concern during this project that she was pushing herself too much. However, after overcoming her sickness she was amazing. Its a great sense of relief when you have someone in your group that is reliable and forward thinking. 
+Roz worked on the core database, Roz helped with the ApiRoutes, server, sequelize, member.js and the Member webpage mobile responsiveness. She later took on building the Heroku database and fixing any remaining routes that we had missed. 
 
-Besides working on the database, Roz helped with the ApiRoutes, server, sequelize, member.js and the Member webpage mobile responsiveness. She later took on building the Heroku database and fixing any remaining routes that we had missed. 
-
-She didn't need much oversight and just always demanded a clear plan of action. A+
+She didn't need much oversight and was a fantastic team member. 
 
 ### Joshua
-When you have 1 member sick, 1 member MiA and another member who your unsure can help you... the first thing that disappears is your desire to go to sleep. I was supposed to be the front end developer but soon I was touching on every part of the project in one way or another. Until Roz became better I pushed forth with trying to communicate with the team on what I was working on and just co-ordinating where I could. My tiredness ment I stopped relying or believing my team was going to help and I had to carry the project myself. Roz did prove me wrong and honestly this project would not finished without her work but as a team member I admit I did push a level of stress on the team that was undeserved. 
+Front end developer using Tailwind. As I started to understand Kane's situation and communication with Mitchelle was lacking, much of the project was held together by Roz and myself. This meant doing a large portion of the backend routes and javascript logic whilst researching things like passport and databases. 
 
-Overall I pushed the team to just aim for the bare minimum of a project and cut everything that I knew I didn't have time to finish by myself. With that in mind, it did help minimize expectation and eventually allow Roz and myself to clearly draw the line where the project should end. 
 <br>
 <a name="Future">
 
