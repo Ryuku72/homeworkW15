@@ -155,8 +155,6 @@ There are many aspects of this project that is incomplete. A have included a lis
 * Mobile Responsiveness is lacking and needs more work
 * File Names should be correctly named
 * Files should be cleaned and all console.log removed
-
-A lot of things need work... 
 <br>
 
 <a name="Install">
@@ -237,5 +235,5 @@ UWA Coding Bootcamp
 Code was originally supplied in the WAUS-CRAW-FSF-PT-02-2020-U-C-MW / Week 15 / Homework repository on GitLab https://waustralia.bootcampcontent.com/the-university-of-western-australia/WAUS-CRAW-FSF-PT-02-2020-U-C-MW/tree/master/Week%2015/Homework
 <br>
 
-### Joshua K Bader // Ryuku72 // jaybshinsen@hotmail.com
+### // Ryuku72
 ### Made with ReadMe.Md Generator 
