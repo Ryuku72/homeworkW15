@@ -1,8 +1,3 @@
-![GitHub Project2 last commit](https://img.shields.io/github/last-commit/Kane-R/Project2?style=for-the-badge)![GitHub Project2 commit activity](https://img.shields.io/github/commit-activity/y/Kane-R/Project2?style=for-the-badge)![GitHub contributors](https://img.shields.io/github/contributors/Kane-R/Project2?style=for-the-badge) __Project 2__
-
-![GitHub Bookmarkr last commit](https://img.shields.io/github/last-commit/Ryuku72/15Bookmarkr?style=for-the-badge)![GitHub W15 commit activity](https://img.shields.io/github/commit-activity/y/Ryuku72/15Bookmarkr?style=for-the-badge)![GitHub contributors](https://img.shields.io/github/contributors/Ryuku72/15Bookmarkr?style=for-the-badge) __15Bookmark Stats__
-****
-
 # Bookmakr
 __PROJECT15 // GROUP PROJECT II: 8TH JUNE 2020__
 <br>
@@ -180,7 +175,6 @@ Project Link: https://shrouded-shelf-71046.herokuapp.com/
 
 ## Acknowledgements
 UWA Coding Bootcamp
-
 <br>
 
 ## Source
@@ -189,3 +183,8 @@ Code was originally supplied in the WAUS-CRAW-FSF-PT-02-2020-U-C-MW / Week 15 / 
 
 ### // Ryuku72
 ### Made with ReadMe.Md Generator 
+
+********
+![GitHub Project2 last commit](https://img.shields.io/github/last-commit/Kane-R/Project2?style=for-the-badge)![GitHub Project2 commit activity](https://img.shields.io/github/commit-activity/y/Kane-R/Project2?style=for-the-badge)![GitHub contributors](https://img.shields.io/github/contributors/Kane-R/Project2?style=for-the-badge) __Project 2__
+
+![GitHub Bookmarkr last commit](https://img.shields.io/github/last-commit/Ryuku72/15Bookmarkr?style=for-the-badge)![GitHub W15 commit activity](https://img.shields.io/github/commit-activity/y/Ryuku72/15Bookmarkr?style=for-the-badge)![GitHub contributors](https://img.shields.io/github/contributors/Ryuku72/15Bookmarkr?style=for-the-badge) __15Bookmark Stats__
